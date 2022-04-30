@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/ImageViewBackground"
+        android:src="@drawable/eb_background_signal"
+        android:scaleType="centerCrop"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    android:background="@drawable/eb_background_signal">-->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--        <Button-->
+<!--            android:id="@+id/choice1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="24dp"-->
+<!--            android:background="#ac00ea"-->
+<!--            android:padding="16dp"-->
+<!--            android:text="bird"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="24dp" />-->
+<!--&ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/choice2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="24dp"-->
+<!--            android:background="#ac00ea"-->
+<!--            android:padding="16dp"-->
+<!--            android:text="door"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="24dp" />-->
+<!--&ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/choice3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="24dp"-->
+<!--            android:background="#ac00ea"-->
+<!--            android:padding="16dp"-->
+<!--            android:text="rock"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="24dp" />-->
+<!--&ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/choice4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="24dp"-->
+<!--            android:background="#ac00ea"-->
+<!--            android:padding="16dp"-->
+<!--            android:text="quit"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="24dp" />-->
+
+    </LinearLayout>
+</ScrollView>
+
+</FrameLayout>
