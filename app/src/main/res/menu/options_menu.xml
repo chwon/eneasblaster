@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/choosefile"
+        android:title="Choose playlist file"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/switchapp"
+        android:title="Switch app"
+        android:checkable="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/pintrack"
+        android:title="Pin track"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/playpinnedtrack"
+        android:title="Play pinned track"
+        android:enabled="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/switchlocal"
+        android:title="Switch to local device"
+        app:showAsAction="never" />
+</menu>
