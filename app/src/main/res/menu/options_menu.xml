@@ -1,27 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/choosefile"
-        android:title="Choose playlist file"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/switchapp"
-        android:title="Switch app"
-        android:checkable="true"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/pintrack"
-        android:title="Pin track"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/playpinnedtrack"
-        android:title="Play pinned track"
-        android:enabled="false"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/switchlocal"
-        android:title="Switch to local device"
-        app:showAsAction="never" />
+    <group android:id="@+id/group_listselection">
+        <item
+            android:id="@+id/choosefile"
+            android:title="Choose playlist file [none]"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/toggleplaylist"
+            android:checkable="true"
+            android:title="Use internal playlist"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/exportplaylist"
+            android:title="Export internal playlist"
+            app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/group_listmgmt">
+        <item
+            android:id="@+id/addtrack"
+            android:title="Add track to playlist"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/deletetrack"
+            android:title="Delete track from playlist"
+            app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/group_pinning">
+        <item
+            android:id="@+id/pintrack"
+            android:title="Pin track"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/playpinnedtrack"
+            android:enabled="false"
+            android:title="Play pinned track"
+            app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/group_playbackmode">
+        <item
+            android:id="@+id/randomtrack"
+            android:title="Play random track"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/continuousplay"
+            android:checkable="true"
+            android:title="Continuous playback"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/randomplay"
+            android:checkable="true"
+            android:title="Random playback"
+            app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/group_switch">
+        <item
+            android:id="@+id/switchapp"
+            android:checkable="true"
+            android:title="Switch app"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/switchlocal"
+            android:title="Switch to local device"
+            app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/group_help">
+        <item
+            android:id="@+id/help"
+            android:title="Help"
+            app:showAsAction="never" />
+    </group>
 </menu>

@@ -17,6 +17,10 @@ import androidx.car.app.model.OnClickListener;
 import androidx.car.app.model.Row;
 import androidx.car.app.model.SearchTemplate;
 import androidx.car.app.model.Template;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleEventObserver;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
 
 import java.util.List;
 import java.util.Locale;
@@ -82,6 +86,21 @@ public class EneasBlasterCarScreen extends Screen {
         itemLimit = manager.getContentLimit(ConstraintManager.CONTENT_LIMIT_TYPE_LIST);
         Log.d("EneasBlasterCarScreen", "itemLimit: " + itemLimit);
 
+        getLifecycle().addObserver(new LifecycleEventObserver() {
+            @Override
+            public void onStateChanged(@NonNull LifecycleOwner source, @NonNull Lifecycle.Event event) {
+                switch (event) {
+                    case ON_PAUSE:
+                        doUnbindService();
+                        break;
+                    case ON_RESUME:
+                        doBindService();
+                        break;
+                    default:
+                        return;
+                }
+            }
+        });
     }
 
     @NonNull

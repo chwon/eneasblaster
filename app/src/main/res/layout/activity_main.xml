@@ -5,70 +5,33 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/ImageViewBackground"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/ImageViewBackground"
-        android:src="@drawable/eb_background_signal"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/eb_background_signal" />
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<!--    android:background="@drawable/eb_background_signal">-->
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/linearlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+        <!--    android:background="@drawable/eb_background_signal">-->
 
-<!--        <Button-->
-<!--            android:id="@+id/choice1"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginBottom="24dp"-->
-<!--            android:background="#ac00ea"-->
-<!--            android:padding="16dp"-->
-<!--            android:text="bird"-->
-<!--            android:textColor="#fff"-->
-<!--            android:textSize="24dp" />-->
-<!--&ndash;&gt;-->
-<!--        <Button-->
-<!--            android:id="@+id/choice2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginBottom="24dp"-->
-<!--            android:background="#ac00ea"-->
-<!--            android:padding="16dp"-->
-<!--            android:text="door"-->
-<!--            android:textColor="#fff"-->
-<!--            android:textSize="24dp" />-->
-<!--&ndash;&gt;-->
-<!--        <Button-->
-<!--            android:id="@+id/choice3"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginBottom="24dp"-->
-<!--            android:background="#ac00ea"-->
-<!--            android:padding="16dp"-->
-<!--            android:text="rock"-->
-<!--            android:textColor="#fff"-->
-<!--            android:textSize="24dp" />-->
-<!--&ndash;&gt;-->
-<!--        <Button-->
-<!--            android:id="@+id/choice4"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginBottom="24dp"-->
-<!--            android:background="#ac00ea"-->
-<!--            android:padding="16dp"-->
-<!--            android:text="quit"-->
-<!--            android:textColor="#fff"-->
-<!--            android:textSize="24dp" />-->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    </LinearLayout>
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+<!--    <ImageView
+        android:id="@+id/overlayframe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"/>-->
+<!--        android:src="@drawable/ic_launcher_foreground"-->
 
 </FrameLayout>
