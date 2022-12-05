@@ -13,12 +13,13 @@ android {
         applicationId "com.chwon.eneasblaster"
         minSdk 27
         targetSdk 31
-        versionCode 12
-        versionName "1.11"
+        versionCode 40
+        versionName "1.39"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "CLIENT_ID", apikeyProperties['CLIENT_ID'])
+        buildConfigField("String", "CLIENT_CREDENTIAL_BASE64", apikeyProperties['CLIENT_CREDENTIAL_BASE64'])
     }
 
     buildTypes {
@@ -40,6 +41,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.code.gson:gson:2.8.9'
+    implementation files('libs/okhttp-4.10.0.jar')
+    implementation 'com.squareup.okio:okio:3.2.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
