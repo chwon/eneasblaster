@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:id="@+id/group_listselection">
         <item
-            android:id="@+id/choosefile"
-            android:title="Choose playlist file [none]"
-            app:showAsAction="never" />
-        <item
             android:id="@+id/toggleplaylist"
             android:checkable="true"
             android:title="Use internal playlist"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/choosefile"
+            android:title="Choose playlist file [none]"
             app:showAsAction="never" />
         <item
             android:id="@+id/exportplaylist"
