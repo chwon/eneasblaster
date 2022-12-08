@@ -13,8 +13,8 @@ android {
         applicationId "com.chwon.eneasblaster"
         minSdk 27
         targetSdk 31
-        versionCode 40
-        versionName "1.39"
+        versionCode 41
+        versionName "1.40"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 

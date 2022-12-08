@@ -61,7 +61,7 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity implements Refreshable {
 
-    private final String HELPPAGE_URI = "https://chwon.github.io/eneasblaster/help.html";
+    private final String HELPPAGE_URI = "https://chwon.github.io/eneasblaster/docs/help.html";
 
     private SpotifyConnectorService mBoundConnectorService;
     private boolean mShouldUnbind;
@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity implements Refreshable {
     private boolean trackDeleteMode = false;
     private String currentTrackUri = "";
 
-    private MenuItem choosePlaylistMenuItem;
     private MenuItem togglePlaylistMenuItem;
+    private MenuItem choosePlaylistMenuItem;
     private MenuItem exportPlaylistMenuItem;
     private MenuItem addTrackMenuItem;
     private MenuItem deleteTrackMenuItem;
@@ -259,8 +259,6 @@ public class MainActivity extends AppCompatActivity implements Refreshable {
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-        choosePlaylistMenuItem = menu.findItem(R.id.choosefile);
-
         togglePlaylistMenuItem = menu.findItem(R.id.toggleplaylist);
         Boolean toggleList = preferences.getBoolean("togglelist", true);
         togglePlaylistMenuItem.setChecked(toggleList);
@@ -268,6 +266,7 @@ public class MainActivity extends AppCompatActivity implements Refreshable {
             togglePlaylistMenuItem.setEnabled(false);
         }
 
+        choosePlaylistMenuItem = menu.findItem(R.id.choosefile);
         exportPlaylistMenuItem = menu.findItem(R.id.exportplaylist);
         addTrackMenuItem = menu.findItem(R.id.addtrack);
         deleteTrackMenuItem = menu.findItem((R.id.deletetrack));
@@ -328,12 +327,6 @@ public class MainActivity extends AppCompatActivity implements Refreshable {
                             "Toggle playback: Spotify is not connected.", Toast.LENGTH_SHORT).show();
                 }
                 return true;
-            case R.id.choosefile:
-                Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-                intent.addCategory(Intent.CATEGORY_OPENABLE);
-                intent.setType("*/*");
-                processSelectedFileLauncher.launch(intent);
-                return true;
             case R.id.toggleplaylist:
                 item.setChecked(!item.isChecked());
                 editor.putBoolean("togglelist", item.isChecked());
@@ -354,6 +347,12 @@ public class MainActivity extends AppCompatActivity implements Refreshable {
                 });
                 refreshUI();
                 return false;
+            case R.id.choosefile:
+                Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+                intent.addCategory(Intent.CATEGORY_OPENABLE);
+                intent.setType("*/*");
+                processSelectedFileLauncher.launch(intent);
+                return true;
             case R.id.addtrack:
                 Toast.makeText(getApplicationContext(),
                         "To add a track, use Spotify's share function.", Toast.LENGTH_LONG).show();
